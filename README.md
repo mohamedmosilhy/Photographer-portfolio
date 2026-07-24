@@ -1,52 +1,72 @@
 # Framing Memories
 
-## Project Description
+An interactive photography portfolio built with HTML, CSS, and vanilla JavaScript. Framing Memories combines a responsive editorial layout with user-controlled themes, rotating hero imagery, an image lightbox, animated skill indicators, timeline content, and persistent display preferences.
 
-"Framing Memories" is a photography portfolio website that showcases the work of talented photographers. It provides a visually engaging platform to display their captured moments and artistic photography skills. The website offers features such as customizable themes, random backgrounds, skill progress bars, image popups, smooth scrolling, and more to enhance the user experience.
+[View the live portfolio](https://mohamedmosilhy.github.io/Photographer-portfolio/) · [View the source](https://github.com/mohamedmosilhy/Photographer-portfolio)
 
-## Demo
-
-You can explore the live demo of the project by visiting [Demo Link](https://mohamedmosilhy.github.io/Photographer-portfolio/).
+![Framing Memories portfolio](./screenshots/home.png)
 
 ## Features
 
-- **Customizable Themes:** Choose from a variety of color schemes to personalize the website's appearance.
-- **Random Backgrounds:** Enjoy dynamic and visually appealing background images.
-- **Skill Progress Bars:** Showcase your photography skills with animated progress bars.
-- **Image Popups:** View high-quality images in interactive pop-up windows.
-- **Smooth Scrolling:** Navigate effortlessly with smooth scrolling between sections.
-- **Navigation Bullets:** Toggle section navigation bullets for easy access.
-- **User Preferences:** Save your preferences for color and background.
-- **Responsive Menu:** Access the menu seamlessly on mobile devices.
+- Configurable accent-color themes
+- Optional hero background rotation every ten seconds
+- Theme, background, and navigation-bullet preferences saved in `localStorage`
+- Settings panel with a one-click preference reset
+- Skill bars animated when the section enters the viewport
+- Gallery images displayed in a generated modal overlay
+- Smooth navigation from header links and section bullets
+- Timeline covering photography milestones
+- Services/features and testimonial sections
+- Responsive mobile navigation menu
+- Contact form presentation
 
-## Installation
+## Page sections
 
-1. Clone this repository to your local machine:
+The portfolio includes a landing area, About Us, Our Skills, Gallery, Timeline, Features, Testimonials, and Contact Us. Navigation links and optional side bullets provide direct access to each main section.
 
-   ```bash
-   git clone <repository-url>
-   ```
+The contact form is currently visual only; it is not connected to a form-processing service.
 
-2. Open the project folder and explore the HTML, CSS, and JavaScript files.
-
-3. To view the website, open the `index.html` file in your preferred web browser.
-
-## Usage
-
-- Explore the "About Us" section to learn about the photographers and their passion for photography.
-- Visit the "Our Skills" section to see the skill progress bars.
-- Click on the "Gallery" section to view stunning photography.
-- Check out the "Timeline" to learn about the photographers' journey.
-- Discover the "Features" section to understand the unique aspects of their work.
-- Read testimonials from satisfied clients in the "Testimonials" section.
-- Contact the photographers through the "Contact Us" section.
-
-## Technologies Used
+## Built with
 
 - HTML5
 - CSS3
 - JavaScript
+- Web Storage API
+- DOM and scroll events
+- CSS custom properties
+- Font Awesome
 - Google Fonts
-- Font Awesome Icons
 
+## Project structure
 
+```text
+Photographer-portfolio/
+├── css/
+│   ├── normalize.css
+│   ├── all.min.css
+│   └── master.css
+├── imgs/          # Hero, gallery, client, and section images
+├── js/
+│   └── master.js  # Settings, persistence, navigation, and gallery behavior
+├── webfonts/
+├── index.html
+└── README.md
+```
+
+## Run locally
+
+```bash
+git clone https://github.com/mohamedmosilhy/Photographer-portfolio.git
+cd Photographer-portfolio
+```
+
+Open `index.html` directly or serve the folder with a static web server. No package installation is required.
+
+## Interaction details
+
+- Selecting a color updates the global `--main-color` CSS variable.
+- Enabling random backgrounds cycles through the local hero photographs.
+- Clicking a gallery image creates an overlay and an enlarged image panel.
+- The Reset Options control clears saved display settings and reloads the page.
+
+These behaviors are implemented directly in `js/master.js` without external JavaScript libraries.
